@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+	<title>Application Gestion Salaires</title>
+	 <link href="style1.css" rel="stylesheet" type="text/css">
+	 <style>
+
+		#maske{
+			display: none;
+			background-color: black;
+		}
+
+	 </style>
+	<script language="javascript" src="Partie1.js">
+	</script>
+ </head>
+ <body>
+
+    <div class="container">
+		<div class="row" style="height:70px; color:black; border:1px solid #000;">
+<br><br>
+
+		</div>
+		<div class="row">
+			<div class="col-md-6" style="height:600px; border-left:1px solid #000; border-bottom:1px solid #000; border-right:1px solid #000; color:black; background:#E6E8FA;">
+				
+				<form action="javascript:" method="POST">
+				<center><h4>PANNEAU DE SAISIE</h4></center>
+				<table  class="table">
+					<tr><td>Nom de l'Employé</td><td><input type="text" id="nom" required/></td></tr>
+					<tr><td>Cat&eacute;gorie</td>
+					<td><select id="categorie" name="categorie">
+						<option value ="categorieA" id ="categorieA">Catégorie A</option>
+						<option value ="categorieB" id ="categorieB">Catégorie B</option>
+						<option value="categorieC" id = "categorieC">Catégorie C</option>
+					<tr><td>Nombre d'heures</td><td><input type="number" min="0" max="140" id="nbHeure" required/></td></tr>
+
+					<div class="row">
+
+					<tr><td> t'il effectué des heures Supplémentaires ?</td>
+					<tr><td><input type="radio" value="NON" name="heurs" id = "non" selected="selected"> NON</td></tr>
+					<div id="oui"><tr><td><input type="radio" value="OUI" name="heurs" > OUI</td></tr></div>
+					
+					</div>
+
+					<div class="row form-group" id="maske">	
+					<tr id="maske"><td id = "hsm">Heures Supplémentaires</td><td><input type="number" id="heureSup" min = "0"/></td></tr>
+
+					</div>
+				
+					<tr><td>Avantage</td><td><input type="text" id="avantage"/></td></tr>
+					<span id="info"> </span>
+					<tr><td><input type="submit" id="bouton1" value="Ajouter"/></td><td><input type="reset" id="bouton2" value="Annuler"/></td></tr>
+					
+				</table>
+				</form>
+		  </div>
+		<div class="col-md-6" style="height:600px; border-right:1px solid #000; border-bottom:1px solid #000; color:black; background:#E6E8FA;">
+		<center><h4>ENREGISTREMENT</center></h4><br/>
+		<div id="position1"> </div><br/>
+		<table id="enregistrement" class="table" border="1">
+			<tr><th>Nom</th><th>Salaire</th><th>Retenue à la Soure</th><th>Salaire Net</th></tr>
+		</table>
+		<div id="position2"> </div><br/>
+			
+		</div>
+		</div>
+		<div class="row" style="height:80px; color:black; border:1px solid #000;">
+			
+		</div>
+	 </div>
+ 	</body>
+ 	</html>
